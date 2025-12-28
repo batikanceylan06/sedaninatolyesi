@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>Seda'nın Atölyesi | El Emeği Dekorasyon & Hediyelik</title>
+    <meta
+      name="description"
+      content="Seda'nın Atölyesi'nde el yapımı duvar süsleri, yılbaşı dekorları, kapı süsleri ve kişiye özel tasarım hediyelik eşyaları keşfedin. Özenle hazırlanan el emeği ürünler."
+    />
+    <meta
+      name="keywords"
+      content="el işi, handmade, duvar süsü, yılbaşı dekoru, kapı süsü, hediyelik eşya, ev dekorasyonu, özel tasarım, Seda'nın Atölyesi, kendin yap, diy"
+    />
+    <meta name="author" content="Seda'nın Atölyesi" />
+    <meta name="theme-color" content="#b26a78" />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Seda'nın Atölyesi — El İşi & Özel Seçkiler"
+    />
+    <meta
+      property="og:description"
+      content="Evinize sıcaklık katacak el emeği dekorasyon ürünleri ve özel hediyelikler."
+    />
+    <meta property="og:image" content="favicon-512x512.jpg" />
+    <meta property="og:locale" content="tr_TR" />
+
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png" />
+    <link rel="icon" type="image/png" sizes="64x64" href="favicon-64x64.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="128x128"
+      href="favicon-128x128.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="256x256"
+      href="favicon-256x256.png"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-128x128.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        /* Tema Renkleri */
+        --bg0: #fbf7f7;
+        --bg1: #ffffff;
+        --paper: rgba(255, 255, 255, 0.75);
+        --stroke: rgba(30, 41, 59, 0.1);
+        --shadow: 0 18px 55px rgba(10, 10, 10, 0.1);
+
+        --text: #2a2a34;
+        --muted: #6b7280;
+
+        --brand: #b26a78; /* Gül kurusu */
+        --brand2: #d9a07f;
+
+        --radius: 18px;
+        --radius2: 26px;
+        --max: 1140px;
+        --headerH: 78px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+        color: var(--text);
+        /* ARKA PLAN: Üstten alta sabit geçiş */
+        background: linear-gradient(
+          180deg,
+          rgba(178, 106, 120, 0.15) 0%,
+          rgba(255, 255, 255, 1) 50%,
+          #ffffff 100%
+        );
+        background-attachment: fixed;
+        overflow-x: hidden;
+        padding-top: var(--headerH);
+      }
+
+      /* Hafif doku */
+      body:before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        opacity: 0.4;
+        z-index: -1;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .wrap {
+        width: min(var(--max), calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      /* Header */
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        backdrop-filter: blur(14px);
+        background: rgba(255, 255, 255, 0.62);
+        border-bottom: 1px solid var(--stroke);
+      }
+      .header-inner {
+        min-height: var(--headerH);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 12px 0;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 220px;
+      }
+      .brand-mark {
+        width: 52px;
+        height: 52px;
+        border-radius: 16px;
+        overflow: hidden;
+        background: #fff;
+        border: 1px solid rgba(178, 106, 120, 0.25);
+        box-shadow: 0 10px 25px rgba(178, 106, 120, 0.18);
+        display: grid;
+        place-items: center;
+      }
+      .brand-mark img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .brand-text strong {
+        font-family: "Playfair Display", serif;
+        font-size: 18px;
+        line-height: 1.05;
+        display: block;
+        letter-spacing: -0.2px;
+        color: #2a2630;
+      }
+      .brand-text small {
+        display: block;
+        color: var(--muted);
+        font-size: 12px;
+        margin-top: 2px;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .nav a {
+        padding: 10px 12px;
+        border-radius: 14px;
+        color: #4b5563;
+        font-weight: 600;
+        transition: 0.2s ease;
+        border: 1px solid transparent;
+      }
+      .nav a:hover {
+        background: rgba(178, 106, 120, 0.1);
+        border-color: rgba(178, 106, 120, 0.18);
+        color: #2a2a34;
+      }
+
+      /* .nav-cta SİLİNDİ (Sağ üstteki buton) */
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border-radius: 999px;
+        padding: 12px 16px;
+        font-weight: 700;
+        border: 1px solid rgba(17, 24, 39, 0.1);
+        background: #fff;
+        color: #2a2a34;
+        cursor: pointer;
+        transition: 0.2s ease;
+        box-shadow: 0 10px 28px rgba(10, 10, 10, 0.08);
+        user-select: none;
+      }
+      .btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 14px 36px rgba(10, 10, 10, 0.1);
+      }
+      .btn:active {
+        transform: translateY(0);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--brand), #c97f8c);
+        color: #fff;
+        border-color: rgba(178, 106, 120, 0.35);
+        box-shadow: 0 16px 38px rgba(178, 106, 120, 0.28);
+      }
+      .btn-primary:hover {
+        box-shadow: 0 20px 46px rgba(178, 106, 120, 0.34);
+      }
+
+      .btn-ghost {
+        background: rgba(255, 255, 255, 0.72);
+        backdrop-filter: blur(10px);
+      }
+
+      .hamb {
+        display: none;
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+        border: 1px solid var(--stroke);
+        background: rgba(255, 255, 255, 0.7);
+        box-shadow: 0 12px 30px rgba(10, 10, 10, 0.08);
+        cursor: pointer;
+      }
+      .hamb svg {
+        width: 22px;
+        height: 22px;
+      }
+
+      /* Hero */
+      .hero {
+        padding: 26px 0 18px;
+      }
+      .hero-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: var(--radius2);
+        border: 1px solid var(--stroke);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.82),
+          rgba(255, 255, 255, 0.62)
+        );
+        box-shadow: var(--shadow);
+      }
+      .hero-card:before {
+        content: "";
+        position: absolute;
+        inset: -2px;
+        background: radial-gradient(
+          800px 300px at 50% 0%,
+          rgba(178, 106, 120, 0.1),
+          transparent 60%
+        );
+        pointer-events: none;
+      }
+
+      .hero-inner {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1.25fr 0.95fr;
+        gap: 22px;
+        padding: 22px;
+        align-items: center;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.75);
+        border: 1px solid rgba(178, 106, 120, 0.18);
+        color: #475569;
+        font-weight: 700;
+        box-shadow: 0 10px 26px rgba(10, 10, 10, 0.06);
+        width: fit-content;
+      }
+      .pill .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--brand), var(--brand2));
+        box-shadow: 0 8px 18px rgba(178, 106, 120, 0.28);
+      }
+
+      h1 {
+        margin: 14px 0 8px;
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        letter-spacing: -0.6px;
+        font-size: clamp(30px, 3.5vw, 46px);
+        line-height: 1.05;
+        color: #2a2630;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+      }
+      .sub {
+        color: #586174;
+        font-size: 15.5px;
+        line-height: 1.55;
+        margin: 0 0 14px;
+        max-width: 55ch;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 6px;
+      }
+
+      .badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 14px;
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 12px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        color: #556070;
+        font-weight: 700;
+        font-size: 12.5px;
+      }
+      .badge i {
+        width: 18px;
+        height: 18px;
+        border-radius: 6px;
+        background: rgba(178, 106, 120, 0.14);
+        display: grid;
+        place-items: center;
+        color: var(--brand);
+        font-style: normal;
+        font-size: 12px;
+        border: 1px solid rgba(178, 106, 120, 0.2);
+      }
+
+      .hero-right {
+        display: grid;
+        gap: 12px;
+      }
+      .mini-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .mini {
+        border-radius: 18px;
+        border: 1px solid var(--stroke);
+        background: rgba(255, 255, 255, 0.74);
+        box-shadow: 0 12px 32px rgba(10, 10, 10, 0.07);
+        padding: 14px;
+        position: relative;
+        overflow: hidden;
+        min-height: 92px;
+      }
+      .mini:before {
+        content: "";
+        position: absolute;
+        inset: -2px;
+        background: radial-gradient(
+          400px 160px at 30% 20%,
+          rgba(178, 106, 120, 0.16),
+          transparent 55%
+        );
+        opacity: 0.9;
+        pointer-events: none;
+      }
+      .mini h4 {
+        position: relative;
+        margin: 0 0 6px;
+        font-size: 13.5px;
+        letter-spacing: 0.1px;
+        color: #374151;
+      }
+      .mini p {
+        position: relative;
+        margin: 0;
+        color: #6b7280;
+        font-size: 12.8px;
+        line-height: 1.45;
+      }
+
+      .hero-banner {
+        border-radius: 22px;
+        border: 1px solid var(--stroke);
+        background: linear-gradient(
+          135deg,
+          rgba(178, 106, 120, 0.18),
+          rgba(217, 160, 127, 0.14)
+        );
+        box-shadow: 0 16px 40px rgba(10, 10, 10, 0.08);
+        padding: 16px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+      }
+      .hero-banner strong {
+        font-family: "Playfair Display", serif;
+        font-size: 18px;
+        letter-spacing: -0.2px;
+        color: #2a2630;
+      }
+      .hero-banner span {
+        color: #586174;
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      section {
+        padding: 18px 0 26px;
+      }
+      .section-head {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 14px;
+        margin-bottom: 12px;
+      }
+      .section-head h2 {
+        margin: 0;
+        font-family: "Playfair Display", serif;
+        font-size: 28px;
+        letter-spacing: -0.3px;
+        color: #2a2630;
+      }
+      .section-head p {
+        margin: 0;
+        color: #6b7280;
+        font-weight: 600;
+        font-size: 13.5px;
+      }
+
+      /* Products */
+      .products-shell {
+        border-radius: var(--radius2);
+        border: 1px solid var(--stroke);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.82),
+          rgba(255, 255, 255, 0.64)
+        );
+        box-shadow: var(--shadow);
+        padding: 14px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .pager {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #6b7280;
+        font-weight: 700;
+        font-size: 12.5px;
+      }
+      .pager .pbtn {
+        width: 44px;
+        height: 44px;
+        border-radius: 16px;
+        border: 1px solid rgba(17, 24, 39, 0.1);
+        background: rgba(255, 255, 255, 0.75);
+        box-shadow: 0 12px 30px rgba(10, 10, 10, 0.07);
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        transition: 0.2s ease;
+      }
+      .pager .pbtn:hover {
+        transform: translateY(-1px);
+      }
+      .pager .pbtn:disabled {
+        opacity: 0.45;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      .grid {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        padding: 6px;
+      }
+      .card {
+        border-radius: 20px;
+        overflow: hidden;
+        border: 1px solid rgba(17, 24, 39, 0.1);
+        background: rgba(255, 255, 255, 0.82);
+        box-shadow: 0 14px 34px rgba(10, 10, 10, 0.08);
+        display: flex;
+        flex-direction: column;
+        min-height: 320px;
+      }
+
+      .card .img {
+        height: 190px;
+        background: #f3f4f6;
+        position: relative;
+        overflow: hidden;
+      }
+      .card .img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transform: translateZ(0);
+      }
+      .card .img:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          transparent 55%,
+          rgba(0, 0, 0, 0.22)
+        );
+        pointer-events: none;
+      }
+
+      .card .body {
+        padding: 12px 14px 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex: 1;
+      }
+      .card h3 {
+        margin: 0;
+        font-size: 15.5px;
+        letter-spacing: -0.1px;
+        color: #2a2630;
+      }
+      .card p {
+        margin: 0;
+        color: #6b7280;
+        font-size: 13px;
+        line-height: 1.45;
+        min-height: 36px;
+      }
+      .card .actions {
+        margin-top: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      .btn-sm {
+        padding: 11px 12px;
+        font-size: 13px;
+        font-weight: 800;
+        box-shadow: 0 10px 24px rgba(10, 10, 10, 0.08);
+      }
+
+      .btn-wa {
+        background: linear-gradient(135deg, var(--brand), #c97f8c);
+        border-color: rgba(178, 106, 120, 0.35);
+        color: #fff;
+        box-shadow: 0 16px 34px rgba(178, 106, 120, 0.22);
+      }
+      .btn-wa:hover {
+        box-shadow: 0 20px 44px rgba(178, 106, 120, 0.26);
+      }
+
+      .btn-soft {
+        background: rgba(255, 255, 255, 0.85);
+      }
+
+      /* About + Contact */
+      .two-col {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 14px;
+      }
+      .panel {
+        border-radius: var(--radius2);
+        border: 1px solid var(--stroke);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.82),
+          rgba(255, 255, 255, 0.64)
+        );
+        box-shadow: var(--shadow);
+        padding: 18px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .panel h3 {
+        margin: 0 0 8px;
+        font-family: "Playfair Display", serif;
+        font-size: 20px;
+        letter-spacing: -0.2px;
+        color: #2a2630;
+      }
+      .panel p {
+        margin: 0;
+        color: #5f6b7a;
+        line-height: 1.6;
+        font-weight: 500;
+        font-size: 13.8px;
+      }
+      .steps {
+        margin: 10px 0 0;
+        padding-left: 18px;
+        color: #5f6b7a;
+        line-height: 1.7;
+        font-weight: 600;
+        font-size: 13.5px;
+      }
+      .steps li {
+        margin: 4px 0;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        align-items: stretch;
+      }
+      .c-card {
+        border-radius: 22px;
+        border: 1px solid rgba(17, 24, 39, 0.1);
+        background: rgba(255, 255, 255, 0.82);
+        box-shadow: 0 14px 34px rgba(10, 10, 10, 0.08);
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        min-height: 190px;
+      }
+      .c-top {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      /* GÜNCELLENEN LOGO KUTU CSS'İ */
+      .icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(17, 24, 39, 0.08);
+        background: #fff; /* Arka plan beyaz */
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+
+      /* Tüm SVG ikonlar için sabit boyut - HEPSİ EŞİT */
+      .icon svg {
+        width: 42px;
+        height: 42px;
+        display: block;
+      }
+
+      .c-card strong {
+        font-size: 15px;
+        color: #2a2630;
+      }
+      .c-card span {
+        color: #6b7280;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 1.45;
+      }
+      .c-card .grow {
+        flex: 1;
+      }
+      .c-card .btn {
+        width: fit-content;
+      }
+      .insta-note {
+        margin-top: auto;
+        color: #6b7280;
+        font-weight: 700;
+        font-size: 12.5px;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+
+      /* Footer */
+      footer {
+        padding: 16px 0 32px;
+        color: #6b7280;
+        font-weight: 700;
+        font-size: 13px;
+      }
+      .foot {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      /* FLOAT BUTON */
+      .float-wa {
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+        z-index: 120;
+        width: 70px;
+        height: 70px;
+        background: transparent;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        border-radius: 50%;
+        display: block;
+        border: none;
+      }
+      .float-wa img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      /* Mobile */
+      @media (max-width: 980px) {
+        .hero-inner {
+          grid-template-columns: 1fr;
+        }
+        .two-col {
+          grid-template-columns: 1fr;
+        }
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+        .nav {
+          display: none;
+        }
+        .hamb {
+          display: inline-grid;
+          place-items: center;
+        }
+        .brand {
+          min-width: 0;
+        }
+      }
+      @media (max-width: 560px) {
+        .wrap {
+          width: calc(100% - 28px);
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .card {
+          min-height: 330px;
+        }
+        .card .img {
+          height: 205px;
+        }
+        .hero-inner {
+          padding: 16px;
+        }
+        .products-shell {
+          padding: 12px;
+        }
+        .pager .pbtn {
+          width: 42px;
+          height: 42px;
+        }
+      }
+
+      /* Mobile menu */
+      .mnav {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 200;
+        background: rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(6px);
+        padding: 18px;
+      }
+      .mnav.open {
+        display: block;
+      }
+      .mnav .sheet {
+        background: rgba(255, 255, 255, 0.88);
+        border: 1px solid var(--stroke);
+        border-radius: 22px;
+        box-shadow: var(--shadow);
+        padding: 14px;
+        width: min(520px, 100%);
+        margin-left: auto;
+      }
+      .mnav a {
+        display: block;
+        padding: 14px 12px;
+        border-radius: 16px;
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        background: rgba(255, 255, 255, 0.8);
+        font-weight: 800;
+        color: #374151;
+        margin-top: 10px;
+      }
+      .mnav a:hover {
+        background: rgba(178, 106, 120, 0.1);
+        border-color: rgba(178, 106, 120, 0.18);
+      }
+      section {
+        scroll-margin-top: calc(var(--headerH) + 14px);
+      }
+
+      /* Lightbox */
+      .lb {
+        position: fixed;
+        inset: 0;
+        z-index: 300;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        background: rgba(45, 30, 40, 0.65);
+        backdrop-filter: blur(12px);
+      }
+      .lb.open {
+        display: flex;
+      }
+
+      .lb-card {
+        width: auto;
+        max-width: 1000px;
+        max-height: 90vh;
+        border-radius: 24px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        box-shadow: 0 40px 100px rgba(0, 0, 0, 0.3);
+        background: transparent;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .lb-img {
+        max-width: 100%;
+        max-height: 85vh;
+        display: block;
+        object-fit: contain;
+        border-radius: 4px;
+      }
+
+      .lb-close {
+        position: fixed;
+        top: 24px;
+        right: 24px;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.9);
+        color: #b26a78;
+        border: none;
+        font-size: 24px;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        transition: 0.2s;
+        z-index: 310;
+      }
+      .lb-close:hover {
+        transform: scale(1.1);
+      }
+
+      .lb-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.85);
+        color: #b26a78;
+        border: none;
+        font-size: 28px;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        transition: 0.2s;
+        z-index: 305;
+      }
+      .lb-nav:hover {
+        transform: translateY(-50%) scale(1.1);
+        background: #fff;
+      }
+      .lb-prev {
+        left: 20px;
+      }
+      .lb-next {
+        right: 20px;
+      }
+
+      @media (max-width: 560px) {
+        .lb-nav {
+          width: 44px;
+          height: 44px;
+          font-size: 20px;
+          left: 10px;
+          right: 10px;
+        }
+        .lb-next {
+          right: 10px;
+        }
+        .lb-prev {
+          left: 10px;
+        }
+        .lb-close {
+          top: 14px;
+          right: 14px;
+          width: 40px;
+          height: 40px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="mnav" id="mnav" aria-hidden="true">
+      <div class="sheet">
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+          "
+        >
+          <strong
+            style="font-family: 'Playfair Display', serif; font-size: 18px"
+            >Menü</strong
+          >
+          <button
+            class="btn btn-ghost"
+            id="mnavClose"
+            style="padding: 10px 14px"
+          >
+            Kapat
+          </button>
+        </div>
+        <a href="#urunler" class="mnav-link">Ürünler</a>
+        <a href="#hakkimizda" class="mnav-link">Hakkımızda</a>
+        <a href="#iletisim" class="mnav-link">İletişim</a>
+        <a href="#urunler" class="mnav-link" id="mnavWA"
+          >WhatsApp’tan Sipariş</a
+        >
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="wrap header-inner">
+        <a class="brand" href="#top" aria-label="Seda'nın Atölyesi">
+          <div class="brand-mark" title="Logo">
+            <img src="seda.png" alt="Seda'nın Atölyesi Logo" />
+          </div>
+          <div class="brand-text">
+            <strong>Seda'nın Atölyesi</strong>
+            <small>El işi • Özel seçkiler</small>
+          </div>
+        </a>
+
+        <nav class="nav" aria-label="Sayfa menüsü">
+          <a href="#urunler">Ürünler</a>
+          <a href="#hakkimizda">Hakkımızda</a>
+          <a href="#iletisim">İletişim</a>
+        </nav>
+
+        <button class="hamb" id="hamb" aria-label="Menüyü aç">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#374151"
+            stroke-width="2"
+            stroke-linecap="round"
+          >
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="top" class="hero">
+      <div class="wrap">
+        <div class="hero-card">
+          <div class="hero-inner">
+            <div>
+              <div class="pill">
+                <span class="dot"></span> El emeği • Özenli işçilik • Güvenli
+                alışveriş
+              </div>
+              <h1>El İşi & Özel Seçkiler</h1>
+              <p class="sub">
+                Ürünü beğen, adını yazman yeterli. Renk/ölçü/teslimat
+                detaylarını WhatsApp’tan hızlıca netleştirelim. Yeni ürünler sık
+                sık eklenir.
+              </p>
+
+              <div class="hero-actions">
+                <a class="btn btn-primary" id="heroWA" href="#iletisim"
+                  >WhatsApp’tan Sipariş</a
+                >
+                <a class="btn btn-ghost" href="#urunler">Ürünlere Bak</a>
+              </div>
+
+              <div class="badges" aria-label="Öne çıkanlar">
+                <span class="badge"><i>✓</i> Hızlı dönüş</span>
+                <span class="badge"><i>✓</i> Kargo / elden teslim</span>
+                <span class="badge"><i>✓</i> Özel sipariş mümkün</span>
+              </div>
+            </div>
+
+            <div class="hero-right">
+              <div class="hero-banner">
+                <div>
+                  <strong>Yeni Ürünler & Sezonluk Tasarımlar</strong><br />
+                  <span>Yılbaşı dekoru • duvar süsü • el emeği setler</span>
+                </div>
+                <a class="btn btn-ghost btn-sm" href="#urunler">Göz At →</a>
+              </div>
+
+              <div class="mini-grid">
+                <div class="mini">
+                  <h4>📦 Teslimat</h4>
+                  <p>
+                    Şehir içi elden, şehir dışı kargo. Detaylar WhatsApp’ta.
+                  </p>
+                </div>
+                <div class="mini">
+                  <h4>✨ Özel İstek</h4>
+                  <p>Renk/ölçü/tema isteğine göre hazırlayabilirim.</p>
+                </div>
+                <div class="mini">
+                  <h4>🧵 El emeği</h4>
+                  <p>Özenle hazırlanır, paketlenir, gönderilir.</p>
+                </div>
+                <div class="mini">
+                  <h4>📸 Instagram</h4>
+                  <p>Yeni ürünler ve örnekler Instagram’da paylaşılır.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section id="urunler" style="padding-top: 18px">
+          <div class="section-head">
+            <div>
+              <h2>Ürünler</h2>
+              <p>6’lı sayfa düzeni — sağ/sol ok ile ilerler.</p>
+            </div>
+
+            <div class="pager">
+              <button class="pbtn" id="prevPage" aria-label="Önceki sayfa">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#374151"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <span id="pageInfo">Sayfa 1 / 1</span>
+              <button class="pbtn" id="nextPage" aria-label="Sonraki sayfa">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#374151"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="products-shell">
+            <div class="grid" id="productGrid"></div>
+          </div>
+        </section>
+
+        <section id="hakkimizda">
+          <div class="section-head">
+            <div>
+              <h2>Hakkımızda</h2>
+              <p>Sıcak, samimi ve güvenli alışveriş.</p>
+            </div>
+          </div>
+
+          <div class="two-col">
+            <div class="panel">
+              <h3>Ben Seda 🌿</h3>
+              <p>
+                El emeğini seviyorum. Ürünlerimin bir kısmını elde yapıyorum,
+                bir kısmını da özenle seçip temizleyerek özel seçkiler olarak
+                hazırlıyorum. Amacım: güzel, kullanışlı ve uygun fiyatlı
+                ürünleri güvenle ulaştırmak.
+              </p>
+              <ol class="steps">
+                <li>Ürünleri incele</li>
+                <li>Beğendiğin ürünün <b>adını</b> WhatsApp’ta yaz</li>
+                <li>Fiyat / renk / teslimat detaylarını netleştirelim</li>
+              </ol>
+            </div>
+
+            <div class="panel">
+              <h3>Notlar</h3>
+              <p>
+                Ürünler tek tek/özel hazırlanabildiği için stok ve süre bilgisi
+                WhatsApp’tan netleşir. Şehir içi elden teslim mümkün.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="iletisim">
+          <div class="section-head">
+            <div>
+              <h2>İletişim</h2>
+              <p>En hızlı: WhatsApp • Sosyal: Instagram</p>
+            </div>
+          </div>
+
+          <div class="contact-grid">
+            <div class="c-card">
+              <div class="c-top">
+                <div class="icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="#25D366"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <strong>WhatsApp</strong><br />
+                  <span>Ürünün adını yaz, hızlıca dönüş yapalım.</span>
+                </div>
+              </div>
+              <div class="grow"></div>
+              <a class="btn btn-wa btn-sm" id="contactWA" href="#"
+                >WhatsApp’tan Yaz</a
+              >
+              <span
+                style="color: #6b7280; font-weight: 700; font-size: 12.5px"
+              ></span>
+            </div>
+
+            <div class="c-card">
+              <div class="c-top">
+                <div class="icon">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <linearGradient
+                        id="ig-grad"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%"
+                      >
+                        <stop
+                          offset="0%"
+                          style="stop-color: #f09433; stop-opacity: 1"
+                        />
+                        <stop
+                          offset="25%"
+                          style="stop-color: #e6683c; stop-opacity: 1"
+                        />
+                        <stop
+                          offset="50%"
+                          style="stop-color: #dc2743; stop-opacity: 1"
+                        />
+                        <stop
+                          offset="75%"
+                          style="stop-color: #cc2366; stop-opacity: 1"
+                        />
+                        <stop
+                          offset="100%"
+                          style="stop-color: #bc1888; stop-opacity: 1"
+                        />
+                      </linearGradient>
+                    </defs>
+                    <path
+                      fill="url(#ig-grad)"
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.069-4.85.069-3.204 0-3.584-.012-4.849-.069-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <strong>Instagram</strong><br />
+                  <span
+                    >Bizi Instagram’dan takip edin ✨ Yeni ürünleri
+                    kaçırma.</span
+                  >
+                </div>
+              </div>
+              <div class="grow"></div>
+              <a
+                class="btn btn-ghost btn-sm"
+                id="contactIG"
+                href="#"
+                target="_blank"
+                rel="noopener"
+                >Instagram’a Git</a
+              >
+              <div class="insta-note"></div>
+            </div>
+
+            <div class="c-card">
+              <div class="c-top">
+                <div class="icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#c98a69"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M3 7h11v10H3z"></path>
+                    <path d="M14 10h4l3 3v4h-7"></path>
+                    <path d="M7 19a1.5 1.5 0 1 0 0 .01"></path>
+                    <path d="M18 19a1.5 1.5 0 1 0 0 .01"></path>
+                  </svg>
+                </div>
+                <div>
+                  <strong>Teslimat</strong><br />
+                  <span>Kargo veya elden teslim seçenekleri.</span>
+                </div>
+              </div>
+              <div class="grow"></div>
+              <span style="color: #5f6b7a; font-weight: 650; line-height: 1.55">
+                Teslimat detaylarını (şehir/semt) WhatsApp üzerinden
+                konuşuyoruz.
+              </span>
+            </div>
+          </div>
+        </section>
+
+        <footer>
+          <div class="wrap foot">
+            <div>© <span id="year"></span> Seda'nın Atölyesi</div>
+            <div style="display: flex; gap: 8px; align-items: center">
+              Made with <span style="opacity: 0.9">🤍</span>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </main>
+
+    <a class="float-wa" id="floatWA" href="#" aria-label="WhatsApp">
+      <img src="Adsız tasarım.png" alt="WhatsApp" />
+    </a>
+
+    <div class="lb" id="lb" aria-hidden="true">
+      <button class="lb-close" id="lbClose" aria-label="Kapat">✕</button>
+      <button class="lb-nav lb-prev" id="lbPrev" aria-label="Önceki">‹</button>
+      <button class="lb-nav lb-next" id="lbNext" aria-label="Sonraki">›</button>
+
+      <div class="lb-card" role="dialog" aria-label="Görsel">
+        <img class="lb-img" id="lbImg" alt="Ürün görseli" />
+      </div>
+    </div>
+
+    <script>
+      // =========================
+      // AYARLAR
+      // =========================
+      const CONFIG = {
+        whatsappNumber: "905528325112",
+        instagramUrl:
+          "https://instagram.com/sedanin_atolyesi_?igsh=MXJqejRkY3F6am50bw==",
+        shopName: "Seda'nın Atölyesi",
+      };
+
+      const ALL_PRODUCTS = [
+        {
+          name: "Kelebek Duvar Tablosu",
+          desc: "Zarif, dekoratif duvar çalışması.",
+          img: "WhatsApp Image 2025-12-27 at 22.32.25.jpeg",
+        },
+        {
+          name: "Yılbaşı Mini Ağaç",
+          desc: "Işıklı, masa üstü süs.",
+          img: "WhatsApp Image 2025-12-27 at 22.32.13.jpeg",
+        },
+        {
+          name: "Işıklı Konik Set",
+          desc: "Sıcak ışıkla ev dekoru.",
+          img: "WhatsApp Image 2025-12-27 at 22.32.12 (4).jpeg",
+        },
+
+        {
+          name: "Kapı Süsü (Çelenk)",
+          desc: "Yılbaşı temalı kapı süsü.",
+          img: "WhatsApp Image 2025-12-27 at 22.32.12 (3).jpeg",
+        },
+        {
+          name: "Deniz Kabuk Çerçeve",
+          desc: "El emeği, özgün tasarım.",
+          img: "WhatsApp Image 2025-12-27 at 22.32.12 (2).jpeg",
+        },
+        {
+          name: "Işıklı Konik Dekor",
+          desc: "Sıcak ambiyans, şık görünüm.",
+          img: "WhatsApp Image 2025-12-27 at 22.32.12 (1).jpeg",
+        },
+
+        {
+          name: "Ahşap Ev Set",
+          desc: "Sıcacık yılbaşı dekoru."
+          img: "WhatsApp Image 2025-12-27 at 22.32.09 (1).jpeg",
+        },
+        {
+          name: "Minimal Duvar Çerçevesi",
+          desc: "Sade ve zarif duvar dekoru.",
+          img: "WhatsApp Image 2025-12-27 at 22.32.25 (1).jpeg",
+        },
+      ];
+
+      // Helpers
+      const $ = (q) => document.querySelector(q);
+      const grid = $("#productGrid");
+
+      function waNumberSanitized() {
+        const raw = String(CONFIG.whatsappNumber || "");
+        const digits = raw.replace(/\D/g, "");
+        if (!digits || digits.length < 11 || /x/i.test(raw)) return "";
+        return digits;
+      }
+
+      function waLink(text) {
+        const msg = encodeURIComponent(text);
+        const n = waNumberSanitized();
+        if (!n) return "#";
+        return `https://wa.me/${n}?text=${msg}`;
+      }
+
+      function setWALinks() {
+        const baseText = `Merhaba  ${CONFIG.shopName} - ürünleriniz hakkında bilgi almak istiyorum.`;
+        const link = waLink(baseText);
+
+        const waTargets = ["#floatWA", "#contactWA"];
+        waTargets.forEach((sel) => {
+          const el = $(sel);
+          if (!el) return;
+          el.href = link;
+          el.addEventListener("click", (e) => {
+            if (el.getAttribute("href") === "#") {
+              e.preventDefault();
+              alert(
+                "WhatsApp bağlantısı için CONFIG.whatsappNumber alanına 90 ile başlayan gerçek numarayı yazmalısın."
+              );
+            }
+          });
+        });
+
+        // navWA ID'li eleman silindiği için buradaki referansı kaldırdım/pas geçtim
+        if ($("#navWA")) $("#navWA").href = "#iletisim";
+
+        $("#heroWA").href = "#iletisim";
+        $("#mnavWA").href = "#iletisim";
+
+        $("#contactIG").href = CONFIG.instagramUrl;
+      }
+
+      // Pagination
+      const PAGE_SIZE = 6;
+      let page = 0;
+
+      function totalPages() {
+        return Math.max(1, Math.ceil(ALL_PRODUCTS.length / PAGE_SIZE));
+      }
+
+      function render() {
+        const start = page * PAGE_SIZE;
+        const items = ALL_PRODUCTS.slice(start, start + PAGE_SIZE);
+
+        grid.innerHTML = items
+          .map(
+            (p, i) => `
+        <article class="card">
+          <div class="img" role="button" tabindex="0" aria-label="Görseli büyüt" data-idx="${
+            start + i
+          }">
+            <img src="${p.img}" alt="${p.name}">
+          </div>
+          <div class="body">
+            <h3>${p.name}</h3>
+            <p>${p.desc}</p>
+            <div class="actions">
+              <a class="btn btn-wa btn-sm" href="${waLink(
+                `Merhaba ${p.name} hakkında bilgi almak istiyorum.`
+              )}">WhatsApp’tan sor</a>
+              <a class="btn btn-soft btn-sm" href="#iletisim">İletişim</a>
+            </div>
+          </div>
+        </article>
+      `
+          )
+          .join("");
+
+        const tp = totalPages();
+        $("#pageInfo").textContent = `Sayfa ${page + 1} / ${tp}`;
+
+        $("#prevPage").disabled = page <= 0;
+        $("#nextPage").disabled = page >= tp - 1;
+        bindImageClicks();
+      }
+
+      $("#prevPage").addEventListener("click", () => {
+        page = Math.max(0, page - 1);
+        render();
+      });
+      $("#nextPage").addEventListener("click", () => {
+        page = Math.min(totalPages() - 1, page + 1);
+        render();
+      });
+
+      // Mobile Menu
+      const mnav = $("#mnav");
+      $("#hamb").addEventListener("click", () => {
+        mnav.classList.add("open");
+        mnav.setAttribute("aria-hidden", "false");
+      });
+      $("#mnavClose").addEventListener("click", () => {
+        mnav.classList.remove("open");
+        mnav.setAttribute("aria-hidden", "true");
+      });
+      mnav.addEventListener("click", (e) => {
+        if (e.target === mnav) {
+          mnav.classList.remove("open");
+          mnav.setAttribute("aria-hidden", "true");
+        }
+      });
+      document.querySelectorAll(".mnav-link").forEach((a) => {
+        a.addEventListener("click", () => {
+          mnav.classList.remove("open");
+          mnav.setAttribute("aria-hidden", "true");
+        });
+      });
+
+      // Lightbox
+      const lb = $("#lb");
+      const lbImg = $("#lbImg");
+      const lbClose = $("#lbClose");
+      const lbPrev = $("#lbPrev");
+      const lbNext = $("#lbNext");
+      let lbIndex = 0;
+
+      function openLB(idx) {
+        lbIndex = Math.max(0, Math.min(ALL_PRODUCTS.length - 1, idx));
+        lbImg.src = ALL_PRODUCTS[lbIndex].img;
+        lb.classList.add("open");
+        lb.setAttribute("aria-hidden", "false");
+      }
+      function closeLB() {
+        lb.classList.remove("open");
+        lb.setAttribute("aria-hidden", "true");
+        lbImg.src = "";
+      }
+      function stepLB(dir) {
+        const next = lbIndex + dir;
+        if (next < 0 || next >= ALL_PRODUCTS.length) return;
+        openLB(next);
+      }
+
+      lbClose.addEventListener("click", closeLB);
+      lb.addEventListener("click", (e) => {
+        if (e.target === lb) closeLB();
+      });
+      lbPrev.addEventListener("click", () => stepLB(-1));
+      lbNext.addEventListener("click", () => stepLB(1));
+      document.addEventListener("keydown", (e) => {
+        if (!lb.classList.contains("open")) return;
+        if (e.key === "Escape") closeLB();
+        if (e.key === "ArrowLeft") stepLB(-1);
+        if (e.key === "ArrowRight") stepLB(1);
+      });
+
+      function bindImageClicks() {
+        document.querySelectorAll("#productGrid .img").forEach((el) => {
+          const idx = Number(el.getAttribute("data-idx") || "0");
+          el.style.cursor = "zoom-in";
+          el.addEventListener("click", () => openLB(idx));
+          el.addEventListener("keydown", (ev) => {
+            if (ev.key === "Enter" || ev.key === " ") {
+              ev.preventDefault();
+              openLB(idx);
+            }
+          });
+        });
+      }
+
+      $("#year").textContent = new Date().getFullYear();
+
+      setWALinks();
+      render();
+    </script>
+  </body>
+</html>
