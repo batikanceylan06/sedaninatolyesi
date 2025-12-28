@@ -2,7 +2,10 @@
 <html lang="tr">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
 
     <title>Seda'nın Atölyesi | El Emeği Dekorasyon & Hediyelik</title>
     <meta
@@ -45,6 +48,7 @@
       href="favicon-256x256.png"
     />
     <link rel="apple-touch-icon" sizes="180x180" href="favicon-128x128.png" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -75,6 +79,7 @@
 
       * {
         box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent; /* Mobil tıklama efektini temizle */
       }
       html,
       body {
@@ -85,7 +90,6 @@
         margin: 0;
         font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
         color: var(--text);
-        /* ARKA PLAN: Üstten alta sabit geçiş */
         background: linear-gradient(
           180deg,
           rgba(178, 106, 120, 0.15) 0%,
@@ -95,6 +99,13 @@
         background-attachment: fixed;
         overflow-x: hidden;
         padding-top: var(--headerH);
+      }
+
+      /* Dokunmatik kaydırma iyileştirmesi */
+      @media (hover: none) and (pointer: coarse) {
+        body {
+          cursor: auto;
+        }
       }
 
       /* Hafif doku */
@@ -112,6 +123,10 @@
         color: inherit;
         text-decoration: none;
       }
+      button,
+      a {
+        touch-action: manipulation; /* Mobilde gecikmeyi önler */
+      }
       .wrap {
         width: min(var(--max), calc(100% - 40px));
         margin: 0 auto;
@@ -125,7 +140,12 @@
         right: 0;
         z-index: 100;
         backdrop-filter: blur(14px);
-        background: rgba(255, 255, 255, 0.62);
+        background: rgba(
+          255,
+          255,
+          255,
+          0.85
+        ); /* Mobilde daha iyi okuma için opaklık arttı */
         border-bottom: 1px solid var(--stroke);
       }
       .header-inner {
@@ -153,6 +173,7 @@
         box-shadow: 0 10px 25px rgba(178, 106, 120, 0.18);
         display: grid;
         place-items: center;
+        flex-shrink: 0;
       }
       .brand-mark img {
         width: 100%;
@@ -193,8 +214,6 @@
         border-color: rgba(178, 106, 120, 0.18);
         color: #2a2a34;
       }
-
-      /* .nav-cta SİLİNDİ (Sağ üstteki buton) */
 
       .btn {
         display: inline-flex;
@@ -299,6 +318,8 @@
         font-weight: 700;
         box-shadow: 0 10px 26px rgba(10, 10, 10, 0.06);
         width: fit-content;
+        max-width: 100%; /* Taşmayı önle */
+        font-size: 13px; /* Mobilde biraz küçültebiliriz */
       }
       .pill .dot {
         width: 10px;
@@ -306,6 +327,7 @@
         border-radius: 50%;
         background: linear-gradient(135deg, var(--brand), var(--brand2));
         box-shadow: 0 8px 18px rgba(178, 106, 120, 0.28);
+        flex-shrink: 0;
       }
 
       h1 {
@@ -362,6 +384,7 @@
         font-style: normal;
         font-size: 12px;
         border: 1px solid rgba(178, 106, 120, 0.2);
+        flex-shrink: 0;
       }
 
       .hero-right {
@@ -664,7 +687,7 @@
         gap: 12px;
       }
 
-      /* GÜNCELLENEN LOGO KUTU CSS'İ */
+      /* LOGO KUTU CSS */
       .icon {
         width: 80px;
         height: 80px;
@@ -673,12 +696,11 @@
         align-items: center;
         justify-content: center;
         border: 1px solid rgba(17, 24, 39, 0.08);
-        background: #fff; /* Arka plan beyaz */
+        background: #fff;
         overflow: hidden;
         flex-shrink: 0;
       }
 
-      /* Tüm SVG ikonlar için sabit boyut - HEPSİ EŞİT */
       .icon svg {
         width: 42px;
         height: 42px;
@@ -731,8 +753,8 @@
         right: 18px;
         bottom: 18px;
         z-index: 120;
-        width: 70px;
-        height: 70px;
+        width: 60px; /* Mobilde biraz küçülttüm */
+        height: 60px;
         background: transparent;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         border-radius: 50%;
@@ -745,10 +767,17 @@
         object-fit: contain;
       }
 
-      /* Mobile */
+      /* =============================
+         MOBİL İYİLEŞTİRMELERİ
+      ============================== */
       @media (max-width: 980px) {
         .hero-inner {
           grid-template-columns: 1fr;
+          text-align: center; /* Mobilde ortalı daha şık */
+        }
+        .hero-actions,
+        .badges {
+          justify-content: center; /* Mobilde buton ve rozetler ortada */
         }
         .two-col {
           grid-template-columns: 1fr;
@@ -770,28 +799,71 @@
           min-width: 0;
         }
       }
+
       @media (max-width: 560px) {
         .wrap {
-          width: calc(100% - 28px);
+          width: calc(100% - 32px); /* Kenar boşluğu biraz arttırıldı */
         }
+        /* Header */
+        .brand-text strong {
+          font-size: 16px;
+        }
+        .brand-text small {
+          font-size: 11px;
+        }
+
+        /* Hero */
+        .hero-inner {
+          padding: 20px 10px;
+        }
+        h1 {
+          font-size: 32px;
+        }
+        .sub {
+          font-size: 14px;
+        }
+
+        /* Kartlar ve Grid */
         .grid {
-          grid-template-columns: 1fr;
+          grid-template-columns: 1fr; /* Tam genişlik tek sütun */
+          gap: 20px;
         }
         .card {
-          min-height: 330px;
+          min-height: auto; /* Sabit yükseklik kaldırıldı */
         }
         .card .img {
-          height: 205px;
-        }
-        .hero-inner {
-          padding: 16px;
+          height: 240px; /* Mobilde görsel biraz daha yüksek */
         }
         .products-shell {
-          padding: 12px;
+          padding: 10px;
         }
-        .pager .pbtn {
-          width: 42px;
-          height: 42px;
+
+        /* Footer */
+        .foot {
+          flex-direction: column;
+          gap: 15px;
+          text-align: center;
+        }
+
+        /* Lightbox Kontrolleri */
+        .lb-nav {
+          width: 48px;
+          height: 48px;
+          font-size: 24px;
+          background: rgba(255, 255, 255, 0.9);
+        }
+        .lb-prev {
+          left: 10px;
+        }
+        .lb-next {
+          right: 10px;
+        }
+        .lb-close {
+          top: 15px;
+          right: 15px;
+          width: 44px;
+          height: 44px;
+          background: rgba(255, 255, 255, 0.95);
         }
       }
 
@@ -801,35 +873,40 @@
         position: fixed;
         inset: 0;
         z-index: 200;
-        background: rgba(0, 0, 0, 0.35);
-        backdrop-filter: blur(6px);
+        background: rgba(0, 0, 0, 0.45);
+        backdrop-filter: blur(8px);
         padding: 18px;
+        transition: opacity 0.3s;
       }
       .mnav.open {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; /* Menü aşağıdan gelsin modern dursun */
       }
       .mnav .sheet {
-        background: rgba(255, 255, 255, 0.88);
+        background: rgba(255, 255, 255, 0.95);
         border: 1px solid var(--stroke);
         border-radius: 22px;
-        box-shadow: var(--shadow);
-        padding: 14px;
-        width: min(520px, 100%);
-        margin-left: auto;
+        box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 100%;
+        margin: 0;
       }
       .mnav a {
         display: block;
-        padding: 14px 12px;
+        padding: 16px 12px; /* Mobilde parmakla basması daha kolay */
         border-radius: 16px;
         border: 1px solid rgba(15, 23, 42, 0.08);
-        background: rgba(255, 255, 255, 0.8);
+        background: #fff;
         font-weight: 800;
         color: #374151;
-        margin-top: 10px;
+        margin-top: 12px;
+        text-align: center;
+        font-size: 16px;
       }
-      .mnav a:hover {
-        background: rgba(178, 106, 120, 0.1);
-        border-color: rgba(178, 106, 120, 0.18);
+      .mnav a:active {
+        transform: scale(0.98);
+        background: var(--bg0);
       }
       section {
         scroll-margin-top: calc(var(--headerH) + 14px);
@@ -843,8 +920,8 @@
         display: none;
         align-items: center;
         justify-content: center;
-        padding: 20px;
-        background: rgba(45, 30, 40, 0.65);
+        padding: 10px; /* Mobilde kenar boşluğu */
+        background: rgba(20, 10, 15, 0.85); /* Daha koyu arka plan */
         backdrop-filter: blur(12px);
       }
       .lb.open {
@@ -852,13 +929,13 @@
       }
 
       .lb-card {
-        width: auto;
+        width: 100%;
         max-width: 1000px;
-        max-height: 90vh;
-        border-radius: 24px;
+        max-height: 80vh; /* Mobilde biraz daha yer kalsın */
+        border-radius: 16px;
         overflow: hidden;
-        border: 1px solid rgba(255, 255, 255, 0.25);
-        box-shadow: 0 40px 100px rgba(0, 0, 0, 0.3);
+        border: none;
+        box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
         background: transparent;
         position: relative;
         display: flex;
@@ -867,10 +944,9 @@
       }
       .lb-img {
         max-width: 100%;
-        max-height: 85vh;
+        max-height: 80vh;
         display: block;
         object-fit: contain;
-        border-radius: 4px;
       }
 
       .lb-close {
@@ -880,14 +956,14 @@
         width: 48px;
         height: 48px;
         border-radius: 50%;
-        background: rgba(255, 255, 255, 0.9);
+        background: #fff;
         color: #b26a78;
         border: none;
         font-size: 24px;
         display: grid;
         place-items: center;
         cursor: pointer;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         transition: 0.2s;
         z-index: 310;
       }
@@ -902,14 +978,14 @@
         width: 56px;
         height: 56px;
         border-radius: 50%;
-        background: rgba(255, 255, 255, 0.85);
+        background: #fff;
         color: #b26a78;
         border: none;
         font-size: 28px;
         display: grid;
         place-items: center;
         cursor: pointer;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         transition: 0.2s;
         z-index: 305;
       }
@@ -923,28 +999,6 @@
       .lb-next {
         right: 20px;
       }
-
-      @media (max-width: 560px) {
-        .lb-nav {
-          width: 44px;
-          height: 44px;
-          font-size: 20px;
-          left: 10px;
-          right: 10px;
-        }
-        .lb-next {
-          right: 10px;
-        }
-        .lb-prev {
-          left: 10px;
-        }
-        .lb-close {
-          top: 14px;
-          right: 14px;
-          width: 40px;
-          height: 40px;
-        }
-      }
     </style>
   </head>
 
@@ -957,24 +1011,33 @@
             align-items: center;
             justify-content: space-between;
             gap: 10px;
+            margin-bottom: 10px;
           "
         >
           <strong
-            style="font-family: 'Playfair Display', serif; font-size: 18px"
+            style="
+              font-family: 'Playfair Display', serif;
+              font-size: 20px;
+              color: var(--brand);
+            "
             >Menü</strong
           >
           <button
             class="btn btn-ghost"
             id="mnavClose"
-            style="padding: 10px 14px"
+            style="padding: 8px 14px; font-size: 14px"
           >
-            Kapat
+            Kapat ✕
           </button>
         </div>
         <a href="#urunler" class="mnav-link">Ürünler</a>
         <a href="#hakkimizda" class="mnav-link">Hakkımızda</a>
         <a href="#iletisim" class="mnav-link">İletişim</a>
-        <a href="#urunler" class="mnav-link" id="mnavWA"
+        <a
+          href="#urunler"
+          class="mnav-link"
+          id="mnavWA"
+          style="background: var(--bg0); color: var(--brand)"
           >WhatsApp’tan Sipariş</a
         >
       </div>
@@ -998,15 +1061,22 @@
           <a href="#iletisim">İletişim</a>
         </nav>
 
-        <button class="hamb" id="hamb" aria-label="Menüyü aç">
+        <button
+          class="hamb"
+          id="hamb"
+          aria-label="Menüyü aç"
+          style="background: transparent; border: none; box-shadow: none"
+        >
           <svg
             viewBox="0 0 24 24"
             fill="none"
-            stroke="#374151"
+            stroke="#2a2a34"
             stroke-width="2"
             stroke-linecap="round"
+            width="32"
+            height="32"
           >
-            <path d="M4 7h16M4 12h16M4 17h16" />
+            <path d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
       </div>
